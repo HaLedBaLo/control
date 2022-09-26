@@ -12,7 +12,7 @@ mutable struct System
     dt                      # update period
 end
 
-struct Ballbot2D <:SystemModel
+struct Ballbot2D <: SystemModel
     parameters              # contains constant system parameters
 end
 
