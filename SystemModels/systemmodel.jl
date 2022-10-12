@@ -23,5 +23,5 @@ function system_update!(sys::System)
 end
 
 function system_state_update!(sysmodel::Ballbot2D, state, dt)
-    sys.state = ballbot_2D_update(state, dt)
+    return ballbot_2D_update(state, dt)
 end
