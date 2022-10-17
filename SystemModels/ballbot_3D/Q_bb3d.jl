@@ -1,4 +1,4 @@
-function bb3d_Q(ex, ey, ez, r_b, r_w)
+function Q_bb3d(ex, ey, ez, r_b, r_w)
   x0 = sin(ey)
   x1 = 1/r_w
   x2 = sqrt(2)*x1

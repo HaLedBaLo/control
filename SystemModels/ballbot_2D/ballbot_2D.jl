@@ -21,6 +21,8 @@ struct Ballbot2DParameters
 end
 
 function ballbot_2D_update(state, dt, parameters)
+
+
     ddq = M_bb2d(state[2]) \ (
         Q_bb2d() * state[5] -
         C_bb2d(state[2], state[4]) * state[3:4] -
@@ -30,27 +32,6 @@ function ballbot_2D_update(state, dt, parameters)
     state[3:4] += ddq * dt
 
     return state
-end
-
-function testQ(params::Ballbot2DParameters)
-    g = params.gravity
-    # ball 
-    r_b = params.radius_ball
-    m_b = params.mass_ball
-    I_b = params.inertia_ball
-
-    # torso 
-    l = params.length_ball_to_com
-    m_t = params.mass_torso
-    r_t = params.radius_torso
-    I_t = params.inertia_torso
-
-    # wheel
-    global r_w = params.radius_wheel
-    m_w = params.m_wheel
-    I_w = params.inertia_wheel
-
-    Q_bb2d()
 end
 
 Ballbot2DParameters(gravity,

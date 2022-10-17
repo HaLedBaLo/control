@@ -1,4 +1,4 @@
-function bb3d_M(I_bi, I_tx, I_tz, I_wi, ex, ey, ez, lz, m_b, m_t, r_b, r_w)
+function M_bb3d(I_bi, I_tx, I_tz, I_wi, ex, ey, ez, lz, m_b, m_t, r_b, r_w)
   x0 = sin(ey)
   x1 = x0^2
   x2 = I_wi/r_w^2

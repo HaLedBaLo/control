@@ -1,4 +1,4 @@
-function bb3d_C(I_wi, dex, dey, dez, dx, dy, ex, ey, ez, lz, m_t, r_b, r_w)
+function C_bb3d(I_wi, dex, dey, dez, dx, dy, ex, ey, ez, lz, m_t, r_b, r_w)
   x0 = sin(ey)
   x1 = cos(ey)
   x2 = x0*x1
