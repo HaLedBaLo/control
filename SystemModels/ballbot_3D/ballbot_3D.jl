@@ -3,6 +3,8 @@ include("bb3d_C.jl")
 include("bb3d_G.jl")
 include("bb3d_Q.jl")
 
+
+"updates state q with 3D ballbot model equation of motion"
 function ballbot_3D_update(q, dt)
     ddq = bb3d_M(q[3], q[4], q[5]) \
           (bb3d_Q(q[3], q[4], q[5]) * q[11:13] -
@@ -13,4 +15,8 @@ function ballbot_3D_update(q, dt)
     q[6:10] += ddq * dt
 
     return q
+end
+
+function ballbot_3D_linearize(q)
+
 end

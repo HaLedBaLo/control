@@ -1,3 +1,63 @@
-function bb3d_M(ex, ey, ez)
-	return [I_bi/r_b^2 + 1.5*I_wi*sin(ey)^2/r_w^2 + 0.75*I_wi*sin(ez)^2*cos(ey)^2/r_w^2 + 3*I_wi*cos(ey)^2*cos(ez)^2/(4*r_w^2) + m_b + m_t 0.75*I_wi*sin(ex)*sin(ey)*sin(ez)^2*cos(ey)/r_w^2 + 3*I_wi*sin(ex)*sin(ey)*cos(ey)*cos(ez)^2/(4*r_w^2) - 1.5*I_wi*sin(ex)*sin(ey)*cos(ey)/r_w^2 -3*I_wi*r_b*cos(ey)*cos(ez)/(4*r_w^2) - lz*m_t*sin(ex)*sin(ey)*cos(ez) + lz*m_t*sin(ez)*cos(ex) -0.75*I_wi*r_b*sin(ez)*cos(ey)/r_w^2 + lz*m_t*cos(ex)*cos(ey)*cos(ez) 1.5*I_wi*r_b*sin(ey)/r_w^2 + lz*m_t*sin(ex)*cos(ez) - lz*m_t*sin(ey)*sin(ez)*cos(ex); 0.75*I_wi*sin(ex)*sin(ey)*sin(ez)^2*cos(ey)/r_w^2 + 3*I_wi*sin(ex)*sin(ey)*cos(ey)*cos(ez)^2/(4*r_w^2) - 1.5*I_wi*sin(ex)*sin(ey)*cos(ey)/r_w^2 I_bi/r_b^2 + 0.75*I_wi*sin(ex)^2*sin(ey)^2*sin(ez)^2/r_w^2 + 3*I_wi*sin(ex)^2*sin(ey)^2*cos(ez)^2/(4*r_w^2) + 1.5*I_wi*sin(ex)^2*cos(ey)^2/r_w^2 + 3*I_wi*sin(ez)^2*cos(ex)^2/(4*r_w^2) + 0.75*I_wi*cos(ex)^2*cos(ez)^2/r_w^2 + m_b + m_t -3*I_wi*r_b*sin(ex)*sin(ey)*cos(ez)/(4*r_w^2) + 3*I_wi*r_b*sin(ez)*cos(ex)/(4*r_w^2) - lz*m_t*sin(ex)*sin(ey)*sin(ez) - lz*m_t*cos(ex)*cos(ez) -0.75*I_wi*r_b*sin(ex)*sin(ey)*sin(ez)/r_w^2 - 0.75*I_wi*r_b*cos(ex)*cos(ez)/r_w^2 + lz*m_t*sin(ez)*cos(ex)*cos(ey) -1.5*I_wi*r_b*sin(ex)*cos(ey)/r_w^2 + lz*m_t*sin(ex)*sin(ez) + lz*m_t*sin(ey)*cos(ex)*cos(ez); -3*I_wi*r_b*cos(ey)*cos(ez)/(4*r_w^2) - lz*m_t*sin(ex)*sin(ey)*cos(ez) + lz*m_t*sin(ez)*cos(ex) -3*I_wi*r_b*sin(ex)*sin(ey)*cos(ez)/(4*r_w^2) + 3*I_wi*r_b*sin(ez)*cos(ex)/(4*r_w^2) - lz*m_t*sin(ex)*sin(ey)*sin(ez) - lz*m_t*cos(ex)*cos(ez) I_tx + 3*I_wi*r_b^2/(4*r_w^2) + lz^2*m_t*sin(ex)^2*sin(ey)^2*sin(ez)^2 + lz^2*m_t*sin(ex)^2*sin(ey)^2*cos(ez)^2 + lz^2*m_t*sin(ex)^2*cos(ey)^2 + lz^2*m_t*sin(ez)^2*cos(ex)^2 + lz^2*m_t*cos(ex)^2*cos(ez)^2 -lz^2*m_t*sin(ex)*sin(ey)*sin(ez)^2*cos(ex)*cos(ey) - lz^2*m_t*sin(ex)*sin(ey)*cos(ex)*cos(ey)*cos(ez)^2 + lz^2*m_t*sin(ex)*sin(ey)*cos(ex)*cos(ey) -lz^2*m_t*sin(ex)^2*sin(ey)*sin(ez)^2 - lz^2*m_t*sin(ex)^2*sin(ey)*cos(ez)^2 - lz^2*m_t*sin(ey)*sin(ez)^2*cos(ex)^2 - lz^2*m_t*sin(ey)*cos(ex)^2*cos(ez)^2; -0.75*I_wi*r_b*sin(ez)*cos(ey)/r_w^2 + lz*m_t*cos(ex)*cos(ey)*cos(ez) -0.75*I_wi*r_b*sin(ex)*sin(ey)*sin(ez)/r_w^2 - 0.75*I_wi*r_b*cos(ex)*cos(ez)/r_w^2 + lz*m_t*sin(ez)*cos(ex)*cos(ey) -lz^2*m_t*sin(ex)*sin(ey)*sin(ez)^2*cos(ex)*cos(ey) - lz^2*m_t*sin(ex)*sin(ey)*cos(ex)*cos(ey)*cos(ez)^2 + lz^2*m_t*sin(ex)*sin(ey)*cos(ex)*cos(ey) I_tx + 0.75*I_wi*r_b^2/r_w^2 + lz^2*m_t*sin(ey)^2*cos(ex)^2 + lz^2*m_t*sin(ez)^2*cos(ex)^2*cos(ey)^2 + lz^2*m_t*cos(ex)^2*cos(ey)^2*cos(ez)^2 lz^2*m_t*sin(ex)*sin(ez)^2*cos(ex)*cos(ey) + lz^2*m_t*sin(ex)*cos(ex)*cos(ey)*cos(ez)^2; 1.5*I_wi*r_b*sin(ey)/r_w^2 + lz*m_t*sin(ex)*cos(ez) - lz*m_t*sin(ey)*sin(ez)*cos(ex) -1.5*I_wi*r_b*sin(ex)*cos(ey)/r_w^2 + lz*m_t*sin(ex)*sin(ez) + lz*m_t*sin(ey)*cos(ex)*cos(ez) -lz^2*m_t*sin(ex)^2*sin(ey)*sin(ez)^2 - lz^2*m_t*sin(ex)^2*sin(ey)*cos(ez)^2 - lz^2*m_t*sin(ey)*sin(ez)^2*cos(ex)^2 - lz^2*m_t*sin(ey)*cos(ex)^2*cos(ez)^2 lz^2*m_t*sin(ex)*sin(ez)^2*cos(ex)*cos(ey) + lz^2*m_t*sin(ex)*cos(ex)*cos(ey)*cos(ez)^2 I_tz + 1.5*I_wi*r_b^2/r_w^2 + lz^2*m_t*sin(ex)^2*sin(ez)^2 + lz^2*m_t*sin(ex)^2*cos(ez)^2 + lz^2*m_t*sin(ey)^2*sin(ez)^2*cos(ex)^2 + lz^2*m_t*sin(ey)^2*cos(ex)^2*cos(ez)^2]
+function bb3d_M(I_bi, I_tx, I_tz, I_wi, ex, ey, ez, lz, m_b, m_t, r_b, r_w)
+  x0 = sin(ey)
+  x1 = x0^2
+  x2 = I_wi/r_w^2
+  x3 = 1.5*x2
+  x4 = cos(ey)
+  x5 = x4^2
+  x6 = x2*x5
+  x7 = cos(ez)
+  x8 = x7^2
+  x9 = 3*x8/4
+  x10 = sin(ez)
+  x11 = x10^2
+  x12 = 0.75*x11
+  x13 = r_b^2
+  x14 = I_bi/x13 + m_b + m_t
+  x15 = x0*x3
+  x16 = sin(ex)
+  x17 = x16*x4
+  x18 = x12*x2
+  x19 = x0*x17
+  x20 = x2*x9
+  x21 = -x15*x17 + x18*x19 + x19*x20
+  x22 = lz*m_t
+  x23 = cos(ex)
+  x24 = x10*x23
+  x25 = x22*x24
+  x26 = x22*x7
+  x27 = x16*x26
+  x28 = r_b*x4
+  x29 = 3*x2/4
+  x30 = x29*x7
+  x31 = -x0*x27 + x25 - x28*x30
+  x32 = x23*x26
+  x33 = 0.75*x2
+  x34 = -x10*x28*x33 + x32*x4
+  x35 = r_b*x15 - x0*x25 + x27
+  x36 = x23^2
+  x37 = x36*x8
+  x38 = x16^2
+  x39 = x1*x38
+  x40 = x10*x16
+  x41 = x22*x40
+  x42 = -r_b*x0*x16*x30 + r_b*x24*x29 - x0*x41 - x32
+  x43 = r_b*x33
+  x44 = -x0*x40*x43 - x23*x43*x7 + x25*x4
+  x45 = -r_b*x17*x3 + x0*x32 + x41
+  x46 = x13*x2
+  x47 = lz^2*m_t
+  x48 = x38*x47
+  x49 = x36*x47
+  x50 = x11*x49
+  x51 = x37*x47
+  x52 = x11*x48
+  x53 = x48*x8
+  x54 = x23*x47
+  x55 = x19*x54
+  x56 = -x11*x55 - x55*x8 + x55
+  x57 = -x0*x50 - x0*x51 - x0*x52 - x0*x53
+  x58 = x17*x54
+  x59 = x11*x58 + x58*x8
+	return [x1*x3 + x12*x6 + x14 + x6*x9 x21 x31 x34 x35; x21 x11*x29*x36 + x14 + x18*x39 + x20*x39 + x3*x38*x5 + x33*x37 x42 x44 x45; x31 x42 I_tx + x1*x52 + x1*x53 + 3*x46/4 + x48*x5 + x50 + x51 x56 x57; x34 x44 x56 I_tx + x1*x49 + 0.75*x46 + x5*x50 + x5*x51 x59; x35 x45 x57 x59 I_tz + x1*x50 + x1*x51 + x13*x3 + x52 + x53]
 end

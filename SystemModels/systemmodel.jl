@@ -1,4 +1,5 @@
 include("ballbot_2D/ballbot_2D.jl")
+include("ballbot_3D/ballbot_3D.jl")
 
 abstract type SystemModel end
 
@@ -21,15 +22,15 @@ struct Ballbot3D <: SystemModel
     parameters              # contains constant system parameters
 end
 
-# call iteravely to update system state
+"call iteravely to update system state"
 function system_update!(sys::System)
     sys.state = system_state_update!(sys.sysmodel, sys.state, sys.dt)
 end
 
 function system_state_update!(sysmodel::Ballbot2D, state, dt)
-    return ballbot_2D_update(state, dt)
+    return ballbot_2D_update(state, dt, sysmodel.parameters)
 end
 
 function system_state_update!(sysmodel::Ballbot3D, state, dt)
-    return ballbot_3D_update(state, dt)
+    return ballbot_3D_update(state, dt, sysmodel.parameters)
 end
