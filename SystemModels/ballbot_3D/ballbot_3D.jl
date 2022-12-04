@@ -1,7 +1,25 @@
-include("bb3d_M.jl")
-include("bb3d_C.jl")
-include("bb3d_G.jl")
-include("bb3d_Q.jl")
+include("M_bb3d.jl")
+include("C_bb3d.jl")
+include("G_bb3d.jl")
+include("Q_bb3d.jl")
+
+struct Ballbot3DParameters
+    gravity
+
+    radius_ball
+    mass_ball
+    inertia_ball
+
+    vec_ball_com_z
+    mass_torso
+    radius_torso
+    inertia_torso_x
+    inertia_torso_z
+
+    radius_wheel
+    m_wheel
+    inertia_wheel
+end
 
 
 "updates state q with 3D ballbot model equation of motion"
@@ -17,6 +35,24 @@ function ballbot_3D_update(q, dt)
     return q
 end
 
-function ballbot_3D_linearize(q)
-
-end
+Ballbot3DParameters(gravity,
+    radius_ball,
+    mass_ball,
+    vec_ball_com_z,
+    mass_torso,
+    radius_torso,
+    radius_wheel,
+    mass_wheel
+) = Ballbot2DParameters(
+    gravity,
+    radius_ball,
+    mass_ball,
+    mass_ball / 2 * (radius_ball^2 + (radius_ball - 0.01)^2),
+    vec_ball_com_z,
+    mass_torso,
+    radius_torso,
+    mass_torso * (radius_torso^2 / 4 + vec_ball_com_z^2 / 6),
+    radius_wheel,
+    mass_wheel,
+    mass_wheel * radius_wheel^2 / 2
+)
